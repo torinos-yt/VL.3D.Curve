@@ -23,7 +23,7 @@ jobs:
     - name: Publish VL Nuget
       uses: vvvv/PublishVLNuget@1.0.40
       with:
-        nuspec: deployment\VL.Fuse.DomainExtensions.nuspec
+        nuspec: deployment\VL.3D.Curve.nuspec
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
         icon-dst: ./deployment/nugeticon.png
         nuget-key: ${{ secrets.NUGET_KEY }}
