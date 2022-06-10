@@ -1,0 +1,142 @@
+shader SplineMesh_ComputeFX : ComputeShaderBase, Transformation, Camera, ShaderUtils
+{
+    struct Pos3Norm3Tex2
+    {
+        float3 Position;
+        float3 Normal;
+        float2 TexCoord;
+    };
+
+    cbuffer PerDispatch
+    {
+        stage Buffer<float3> PositionBuffer;
+        stage Buffer<float3> TangentBuffer;
+        stage RWStructuredBuffer<Pos3Norm3Tex2> outputBuffer;
+
+        stage float Radius = .15;
+        stage int Resolution;
+        stage bool NormalBend = false;
+        stage int ThicknessSpace = 0;
+        stage int MeshType = 0;
+        stage float4x4 Transform;
+
+        stage float3 Up;
+    }
+
+    float3x3 rot3D(float3 axis, float angle)
+    {
+        float c, s;
+        sincos(angle, s, c);
+
+        float t = 1 - c;
+        float x = axis.x;
+        float y = axis.y;
+        float z = axis.z;
+
+        return float3x3(
+            t * x * x + c,      t * x * y - s * z,  t * x * z + s * y,
+            t * x * y + s * z,  t * y * y + c,      t * y * z - s * x,
+            t * x * z - s * y,  t * y * z + s * x,  t * z * z + c
+        );
+    }
+
+    override void Compute()
+    {
+        uint dtid = streams.DispatchThreadId.x;
+
+        uint n;
+        PositionBuffer.GetDimensions(n);
+
+        if(dtid >= n-MeshType) return;
+
+        float3 p = mul(float4(PositionBuffer[dtid], 1), Transform).xyz;
+        float3 t = mul(TangentBuffer[dtid], (float3x3)Transform);
+
+        float3 viewDir = ViewInverse[3].xyz - p;
+        float3 viewFront = ViewInverse[2].xyz;
+
+        float scale = ThicknessSpace == 1 ? mul(float4(dot(viewFront, viewDir).xxx,1.0),ProjectionInverse).y*.2 : 1;
+
+        if(MeshType == 0)
+        {
+            Pos3Norm3Tex2 v0, v1;
+
+            viewDir = normalize(viewDir);
+            float3 dir = normalize(cross(t, viewDir));
+
+            v0.Position = p + dir * Radius * .5 * scale;
+            v1.Position = p - dir * Radius * .5 * scale;
+
+            v0.Normal = NormalBend ? lerp( dir, viewDir, .5) : viewDir;
+            v1.Normal = NormalBend ? lerp(-dir, viewDir, .5) : viewDir;
+
+            float div = dtid / (float)(n-1);
+            v0.TexCoord = float2(div, 1);
+            v1.TexCoord = float2(div, 0);
+
+            outputBuffer[dtid * 2 + 0] = v0;
+            outputBuffer[dtid * 2 + 1] = v1;
+        }
+        else
+        {
+            Pos3Norm3Tex2 v0, v1, v2, v3;
+
+            float3 pNext = mul(float4(PositionBuffer[dtid+1], 1), Transform).xyz;
+            float3 tNext = mul(TangentBuffer[dtid+1], (float3x3)Transform);
+
+            float3x3 r = rot3D(normalize(t),  TwoPi / Resolution);
+            float3x3 rNext = rot3D(normalize(tNext),  TwoPi / Resolution);
+
+            float3 dir = normalize(cross(t, cross(t, Up)));
+            float3 dirNext = normalize(cross(tNext, cross(tNext, Up)));
+
+            viewDir = ViewInverse[3].xyz - pNext;
+            float scaleNext = ThicknessSpace == 1 ? mul(float4(dot(viewFront, viewDir).xxx,1.0),ProjectionInverse).y*.2 : 1;
+
+            v0.Position = p + dir * Radius * .5 * scale;
+            v1.Position = pNext + dirNext * Radius * .5 * scaleNext;
+
+            float divX = 1.0 / (float)n;
+            float divY = 1.0 / Resolution;
+
+            v0.TexCoord = float2(divX * dtid, 0);
+            v1.TexCoord = float2(divX * (dtid+1), 0);
+
+            for(uint i = 0; i < Resolution; i++)
+            {
+                v0.Normal = dir;
+                v1.Normal = dirNext;
+
+                dir = mul(dir, r);
+                dirNext = mul(dirNext, rNext);
+
+                v2.Position = p + dir * Radius * .5 * scaleNext;
+                v3.Position = pNext + dirNext * Radius * .5 * scaleNext;
+
+                v2.Normal = dir;
+                v3.Normal = dirNext;
+
+                v2.TexCoord = float2(divX * dtid, divY * (i+1));
+                v3.TexCoord = float2(divX * (dtid+1), divY * (i+1));
+
+                uint offset = dtid * 6 * Resolution + 6 * i;
+
+                // tri0
+                outputBuffer[offset + 0] = v2;
+                outputBuffer[offset + 1] = v1;
+                outputBuffer[offset + 2] = v0;
+
+                // tri1
+                outputBuffer[offset + 3] = v2;
+                outputBuffer[offset + 4] = v3;
+                outputBuffer[offset + 5] = v1;
+
+                v0.Position = v2.Position;
+                v1.Position = v3.Position;
+
+                v0.TexCoord = v2.TexCoord;
+                v1.TexCoord = v3.TexCoord;
+            }
+        }
+    }
+};
