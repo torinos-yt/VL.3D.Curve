@@ -3,7 +3,7 @@
 
 public enum ThicknessSpace
 {
-    Wolrd = 0,
+    World = 0,
     Pixel
 }
 
