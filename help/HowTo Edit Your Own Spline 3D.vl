@@ -95,7 +95,7 @@
             <Pin Id="MKVo70nKoJaOtZnIlOSBrG" Name="Spline" Kind="InputPin" />
             <Pin Id="B6VFmwPgPVIONCfPEKDbmK" Name="Thickness" Kind="InputPin" />
             <Pin Id="MHS1gw0lXR8NN04h3mnCdg" Name="Normal Bending" Kind="InputPin" DefaultValue="False" />
-            <Pin Id="CbM9C6InVo4Ny0qBVcruxS" Name="Thickness Space" Kind="InputPin" DefaultValue="Wolrd" />
+            <Pin Id="CbM9C6InVo4Ny0qBVcruxS" Name="Thickness Space" Kind="InputPin" DefaultValue="World" />
             <Pin Id="CKxfJmSo1jZLU7ucmm1V08" Name="Mesh Type" Kind="InputPin" DefaultValue="Ribbon" />
             <Pin Id="PbmyWE9B08lMb3NbYqyxXq" Name="Tube Resolution" Kind="InputPin" />
             <Pin Id="IdsQv3ZTicdNUEU2EDmoBe" Name="Material" Kind="InputPin" />

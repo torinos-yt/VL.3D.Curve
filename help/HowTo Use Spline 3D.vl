@@ -437,8 +437,8 @@
             <Pin Id="PdarS9DGCP4PNkcvEYno8C" Name="Transformation" Kind="InputPin" />
             <Pin Id="PCwxpxCMQblP5ruTutxtGv" Name="Spline" Kind="InputPin" />
             <Pin Id="GaxPzxjlZLYLnwKSkCyd30" Name="Thickness" Kind="InputPin" />
-            <Pin Id="MHE9IcQIJ3OLsCHWr1A3Vm" Name="Normal Bending" Kind="InputPin" DefaultValue="False" />
-            <Pin Id="IMiSIXPGrPSMlh2Fj9PiAj" Name="Thickness Space" Kind="InputPin" DefaultValue="Wolrd" />
+            <Pin Id="MHE9IcQIJ3OLsCHWr1A3Vm" Name="Normal Bending" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="IMiSIXPGrPSMlh2Fj9PiAj" Name="Thickness Space" Kind="InputPin" DefaultValue="World" />
             <Pin Id="M8yWPgwW1BqM8FzmEWlCsw" Name="Mesh Type" Kind="InputPin" DefaultValue="Ribbon" />
             <Pin Id="ICpLzkGxxYjOrxQIJc15ut" Name="Tube Resolution" Kind="InputPin" DefaultValue="8" />
             <Pin Id="FKbk6HrCYfjPdwPnjNOn0D" Name="Up Vector" Kind="InputPin" />
