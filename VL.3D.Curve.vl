@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="NB2RWouMhVpNn3am8QuOHy" LanguageVersion="2025.7.0" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="FjOvYt37vhVLsLgX0XGGR3" LanguageVersion="2025.7.0" Version="0.128">
   <Patch Id="DyvKP8f9IUCMymlEFnDK7d">
-    <Canvas Id="NESItpEmKD3Qba8t8kvfEg" DefaultCategory="3D.Curves" CanvasType="FullCategory">
+    <Canvas Id="NESItpEmKD3Qba8t8kvfEg" DefaultCategory="3D.Curve" CanvasType="FullCategory">
       <!--
 
     ************************ Bezier3D ************************
@@ -721,11 +721,9 @@
                 <Patch Id="O2w924up49JLqh0SuaKzi0" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="PcW4d90FJanOyuESwnY1bV" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="875,1325,48,19" Id="VaOU8PWMYHVNybDvCRt0Ro">
-                  <p:NodeReference LastCategoryFullName="3D.Curves" LastDependency="VL.3D.Curves.vl">
+                  <p:NodeReference LastCategoryFullName="3D.Curve" LastDependency="VL.3D.Curve.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="Curves" NeedsToBeDirectParent="true">
-                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
-                    </CategoryReference>
+                    <CategoryReference Kind="Category" Name="Curve" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="LookAt (Direction)" />
                   </p:NodeReference>
                   <Pin Id="RWjulV4DXL3OWddtLfmbTM" Name="Direction" Kind="InputPin" />
@@ -3405,11 +3403,9 @@
                 <Patch Id="PI7KQQ7N1JFQZKkqcK7VN4" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="CgWi5iXYz43MvD3Thy5K9q" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="492,1216,48,19" Id="IxVvMCeShVWNgqxpxkOTL0">
-                  <p:NodeReference LastCategoryFullName="3D.Curves" LastDependency="VL.3D.Curves.vl">
+                  <p:NodeReference LastCategoryFullName="3D.Curve" LastDependency="VL.3D.Curve.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="Curves" NeedsToBeDirectParent="true">
-                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
-                    </CategoryReference>
+                    <CategoryReference Kind="Category" Name="Curve" NeedsToBeDirectParent="true" />
                     <Choice Kind="OperationCallFlag" Name="LookAt (Direction)" />
                   </p:NodeReference>
                   <Pin Id="Uej9HkdmaGGPYM3LA4V3eW" Name="Direction" Kind="InputPin" />

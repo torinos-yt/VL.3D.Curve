@@ -1037,5 +1037,5 @@
   <NugetDependency Id="IO8aTDo78WDPgfRXOxay63" Location="VL.CoreLib" Version="2025.7.0" />
   <NugetDependency Id="LYe7qeaCsDRNO24AsJPkSE" Location="VL.Stride" Version="2025.7.0" />
   <NugetDependency Id="UBiOFkgLpVeLlhFOfzwZxQ" Location="VL.Stride.TextureFX" Version="2025.7.0" />
-  <DocumentDependency Id="ATZhnBDSBKWLiVeRAEOqre" Location="../VL.3D.Curves.vl" />
+  <DocumentDependency Id="D7ipqELlsKkNr7O4hwA7uG" Location="../VL.3D.Curve.vl" />
 </Document>
