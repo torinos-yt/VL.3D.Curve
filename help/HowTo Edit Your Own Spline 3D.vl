@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Mrof98lEWGTOTjXnIcfJTw" LanguageVersion="2021.4.8.947" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="Mrof98lEWGTOTjXnIcfJTw" LanguageVersion="2025.7.0" Version="0.128">
   <Patch Id="E4zL8yBHvvQM1AtzTXIA3z">
     <Canvas Id="HT4Nvm3umRONtyvThKEseW" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,11 +15,12 @@
       <Patch Id="ECt29bUzjmEQR2zsHt3qYw">
         <Canvas Id="P55eWJIlCveM19P4KTUSny" CanvasType="Group">
           <Node Bounds="382,530,70,19" Id="BnXhC9HlDfWMScyiuBruYI">
-            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastSymbolSource="VL.Curve3D.vl">
+            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastDependency="VL.Curve3D.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SplineEditor" />
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="Blsj7udlawXPnUS73hO0q3" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="Gao9itKxKG6MKzfdsOW0iG" Name="Initial Data" Kind="InputPin" />
             <Pin Id="TCKYy128qFMLRhMGy1uDCa" Name="Clear" Kind="InputPin" />
             <Pin Id="JRM3a2hFn8DNKlIBblTau7" Name="Show Interface" Kind="InputPin" />
@@ -28,22 +29,31 @@
             <Pin Id="Q61viaHFXs5QaIe6jsPVDe" Name="Camera" Kind="OutputPin" />
             <Pin Id="UQ2ZlW5sFQeMUVe2pOOWX3" Name="Spline" Kind="OutputPin" />
           </Node>
-          <Node Bounds="382,622,43,19" Id="EMpCjM0ax9QPLZ2ZJN8VpZ">
-            <p:NodeReference LastCategoryFullName="Stride" LastSymbolSource="VL.Stride.Engine.vl">
+          <Node Bounds="382,622,63,19" Id="EMpCjM0ax9QPLZ2ZJN8VpZ">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.Engine.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="RootScene" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
             </p:NodeReference>
+            <Pin Id="HX6LpsqHYmMNVYZOXKORLF" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="S2mlzUqsZQBQc1miPWSJhd" Name="Child" Kind="InputPin" />
+            <Pin Id="Egu4mnajvFmNtf4P4p6sFG" Name="Child Scenes" Kind="InputPin" IsHidden="true" />
             <Pin Id="AFZLN3A4uiuO1qgN1UJ73U" Name="Enabled" Kind="InputPin" />
             <Pin Id="AMig5XRevZBL6zmiSKSDCA" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="349,720,329,19" Id="NlsbZCngvXFMUWDTpETttp">
-            <p:NodeReference LastCategoryFullName="Stride" LastSymbolSource="VL.Stride.Engine.vl">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.Engine.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
             <Pin Id="VwIzCBhzMgANcQ9ebRYhzj" Name="Bounds" Kind="InputPin" DefaultValue="1027, 85, 678, 933" />
+            <Pin Id="BqIbFx1mZEtLJB4g1gaedd" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PwseSPM1htqP4pB7106tco" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UqBEDVwp7nOMw3ZAwnH2vL" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
+            <Pin Id="A2tXQozQG94OggfTRuKWEi" Name="Back Buffer Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IF20oHJmRnTPjYye1GTd88" Name="Depth Buffer Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="A94QMzpKwnxLqyGkhWjNmK" Name="Input Priority" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CsUmtwb1D1cLqfMeLDCfqA" Name="Node Context" Kind="InputPin" />
             <Pin Id="OSrhnVRcaMtM8FfBOrlfR1" Name="Input" Kind="InputPin" />
             <Pin Id="IVg2dzAwxZUMALEbPoXuKG" Name="Camera" Kind="InputPin" />
             <Pin Id="VG1m31b4Bh8NLguYLPPIue" Name="Enable Default Camera" Kind="InputPin" />
@@ -52,14 +62,30 @@
             <Pin Id="H6c6rl19KfXLWGLZi7oPuy" Name="Clear" Kind="InputPin" />
             <Pin Id="CdsCuc68wb7MwlitA3fcaw" Name="Post Effects" Kind="InputPin" />
             <Pin Id="BITGWfgwC2GNfZ5XWVKTq2" Name="Enable Default Post Effects" Kind="InputPin" />
+            <Pin Id="KUewG0vOUazQajXROvLEa8" Name="Render Group Mask" Kind="InputPin" IsHidden="true" />
+            <Pin Id="INZ3WRNAiAINBgpJxjbK1W" Name="Commands" Kind="InputPin" IsHidden="true" />
             <Pin Id="IBHLNO4vfTkLPEuwoJQFke" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="K0qSq7CrdQROxKwkZiU6S7" Name="Model Effect Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="USvDSGbsrxxMQPvTWFwHSu" Name="Additional Scene Renderers" Kind="InputPin" IsHidden="true" />
             <Pin Id="VcT29A7BeMHM58tJovNeGV" Name="Enabled" Kind="InputPin" />
             <Pin Id="RIC0favKaHGP14dOJJfLGG" Name="Output" Kind="OutputPin" />
             <Pin Id="FDjl6dFU0SLLhEH9rXj7Ql" Name="Client Bounds" Kind="OutputPin" />
             <Pin Id="NR7szD8NC74Lqx2bSGXeEf" Name="Input Source" Kind="OutputPin" />
+            <Pin Id="BsiyUwiiSgvOwvrJSCHT47" Name="Input Source" Kind="InputPin" IsHidden="true" />
+            <Pin Id="QAq4FMofw2wM1Jh4cSHWTH" Name="Present Interval" Kind="InputPin" />
+            <Pin Id="Nho5AnChqccMG4QrZ0OaNv" Name="MSAALevel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GAFOcuSR871NwC5qsRUocf" Name="MSAAResolver" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HA5HdW7wr3XOvL7dEH1kGL" Name="Light Shafts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FYljUnim6kYOi5NXalfVSN" Name="VR Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UKQuwQEYNjWNS9oOGWRdiC" Name="Viewport Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CSErfSVEcK2NwSff5SQKiK" Name="Subsurface Scattering Blur Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Chrm9NyqRbLPqmQmocRBlR" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FOFtIv7eFgMM0OLrcaiU5y" Name="Present Call Intercept" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KnnQ4TKOVVQObQ1gRW6yk3" Name="Back Buffer" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="PsyvxmHDEs6OI1AbXX0CSk" Name="Depth Buffer" Kind="OutputPin" IsHidden="true" />
           </Node>
           <Pad Id="EFHPubMZEnuNDiJZE1AtIT" Comment="Clear" Bounds="405,389,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -68,7 +94,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="Gp8kcFUAhl0PmFGbJHOIxP" Comment="Set Clipboard" Bounds="449,490,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -77,20 +103,22 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="633,478,79,19" Id="Oz5G2Zj02OULw8qSUpT9UI">
-            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastSymbolSource="VL.Curve3D.vl">
+            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastDependency="VL.Curve3D.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="BuildSpline3D" />
             </p:NodeReference>
+            <Pin Id="BVVQYwfh9WdMSsbjxw5cci" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="D7A7AVyY2uEMtdGVUEnQ7O" Name="Points" Kind="InputPin" />
             <Pin Id="I2C5eRann7eOwP2Mczhj7U" Name="Close" Kind="InputPin" DefaultValue="True" />
             <Pin Id="AcF3eaSj0jwO7LboBNtMDO" Name="Output" Kind="OutputPin" />
             <Pin Id="KGmEVgHH7xKM6BcJcWZ7vS" Name="Sample Count" Kind="InputPin" />
           </Node>
           <Node Bounds="613,562,245,19" Id="KebLFuTCawiMVnMZJv2jBD">
-            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastSymbolSource="VL.Curve3D.vl">
+            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastDependency="VL.Curve3D.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SplineEntity" />
             </p:NodeReference>
+            <Pin Id="JhvnaWgBKcaLEGiUbc8yEv" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="JChYYQywllePHCMvMQ6dJo" Name="Transformation" Kind="InputPin" />
             <Pin Id="MKVo70nKoJaOtZnIlOSBrG" Name="Spline" Kind="InputPin" />
             <Pin Id="B6VFmwPgPVIONCfPEKDbmK" Name="Thickness" Kind="InputPin" />
@@ -98,6 +126,8 @@
             <Pin Id="CbM9C6InVo4Ny0qBVcruxS" Name="Thickness Space" Kind="InputPin" DefaultValue="World" />
             <Pin Id="CKxfJmSo1jZLU7ucmm1V08" Name="Mesh Type" Kind="InputPin" DefaultValue="Ribbon" />
             <Pin Id="PbmyWE9B08lMb3NbYqyxXq" Name="Tube Resolution" Kind="InputPin" />
+            <Pin Id="IsiGL1SzIjBOieuw1x1qiT" Name="Up Vector" Kind="InputPin" IsHidden="true" />
+            <Pin Id="I6qBfNkED7xOEinlN0w9L7" Name="Bounding Box" Kind="InputPin" IsHidden="true" />
             <Pin Id="IdsQv3ZTicdNUEU2EDmoBe" Name="Material" Kind="InputPin" />
             <Pin Id="MaleznawrXNMGAfQAFK31n" Name="Is Shadow Caster" Kind="InputPin" />
             <Pin Id="MoDp7Gxo6ZJPe6SJZvANgK" Name="Components" Kind="InputPin" />
@@ -107,27 +137,28 @@
             <Pin Id="DvelWYagTzJLPPeKMN0bkF" Name="Entity" Kind="OutputPin" />
           </Node>
           <Node Bounds="773,518,77,19" Id="A1Pxf6vaozmOLDeHQ05xlq">
-            <p:NodeReference LastCategoryFullName="Stride.Materials" LastSymbolSource="VL.Stride.Rendering.ShaderFX.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Materials" LastDependency="VL.Stride.Rendering.ShaderFX.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ColorMaterial" />
             </p:NodeReference>
+            <Pin Id="AsDhU3AOOtBLJc7d1kWR5O" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="MZ0BQ3b2KOgNmItogA4lHh" Name="Color" Kind="InputPin" />
             <Pin Id="SBo429ospXOPSbX2dYGW0z" Name="Transparency" Kind="InputPin" />
             <Pin Id="NbUUTq5ByGBO7cUoaL83TJ" Name="Cull Mode" Kind="InputPin" DefaultValue="Back" />
             <Pin Id="PmWyIxancOqP7z8GHJOQFw" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="EwvmoFoTY0APdYISdNTk6w" Comment="Sample Count" Bounds="709,444,35,15" ShowValueBox="true" isIOBox="true" Value="64">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="F0FsMXwOLvPPzg7Nd6FM9i" Comment="Thickness" Bounds="655,525,35,15" ShowValueBox="true" isIOBox="true" Value="0.2">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="E8499xyxLH4O5SgXhzIjha" Comment="Close" Bounds="672,392,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -136,7 +167,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="VL62DEiByZbMkZXgCHqMhm" Comment="Points" Bounds="634,258" isIOBox="true">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
                 <TypeReference>
@@ -160,7 +191,7 @@
             </p:Value>
           </Pad>
           <Pad Id="Uo4ehyRGpkFQZQ1Qx46Hob" Comment="Show Interface" Bounds="427,440,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -169,10 +200,10 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="Ft6s5kIja4hPKHkoxow5g8" Comment="Initial Data" Bounds="383,311" isIOBox="true">
-            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.Collections.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
-                <TypeReference LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
+                <TypeReference LastCategoryFullName="3D" LastDependency="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Vector3" />
                 </TypeReference>
               </p:TypeArguments>
@@ -193,7 +224,7 @@
             </p:Value>
           </Pad>
           <Pad Id="Q4iIJeU6bkuQckMA2mgidC" Bounds="441,309,170,63" ShowValueBox="true" isIOBox="true" Value="&lt;- You can also start with a Spline created in another module">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -202,15 +233,17 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="307,230,79,19" Id="BgFVXb0xTFxLoGxEhq7xF5">
-            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastSymbolSource="VL.Curve3D.vl">
+            <p:NodeReference LastCategoryFullName="VL.Curve3D" LastDependency="VL.Curve3D.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="BuildSpline3D (Interpolate)" />
             </p:NodeReference>
+            <Pin Id="NRJOyjtpXyiNCf9oI0n79a" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="P6xsPUajSE8ONLKEQNCFZ7" Name="Segments" Kind="InputPin" />
             <Pin Id="GVK5SX2j0U4L6NOoDcvlES" Name="Handle Length" Kind="InputPin" />
             <Pin Id="K8rF3kta30bM5x50m8vAQP" Name="Close" Kind="InputPin" />
             <Pin Id="OsjMchb1oLVMgOhUG6ySuN" Name="Output" Kind="OutputPin" />
             <Pin Id="SifOqGQMLHHPbMurR56dM7" Name="Points" Kind="OutputPin" />
+            <Pin Id="IX3U4r228lUN9uJe4SvKia" Name="Sample Count" Kind="InputPin" IsHidden="true" />
           </Node>
           <Pad Id="VXfmI3njBTqLVBVlZp1rHB" Comment="Points" Bounds="383,280" isIOBox="true">
             <p:Value>
@@ -218,7 +251,7 @@
             </p:Value>
           </Pad>
           <Pad Id="Nag72AL988GPkjLylMlojS" Bounds="55,238,196,41" ShowValueBox="true" isIOBox="true" Value="1. Connect SplineEditor to RootScene and Window.">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -227,7 +260,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="T7XHBAGb9EVNK8Dr5CAE3p" Bounds="55,291,196,41" ShowValueBox="true" isIOBox="true" Value="2. Press Enter on the Window to start editing Spline.">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -236,7 +269,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="K75EO6Qx6K6PLsDIvqtmkP" Bounds="55,344,198,59" ShowValueBox="true" isIOBox="true" Value="3. When your Spline is complete, Bang &quot;Set Clipboard&quot; to copy it to the clipboard.">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -245,7 +278,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="FWDObF4RXLkMmSTsF2ZFIm" Bounds="55,415,198,59" ShowValueBox="true" isIOBox="true" Value="4. Paste it on the vvvv editor and serialize the necessary information">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -256,12 +289,12 @@
           <Pad Id="PAZ1miB2KxaMB9RFgQeV2L" Comment="Entity" Bounds="384,582" isIOBox="true" />
           <Pad Id="Hy2NL9XOQWOPRwLzgYSzua" Comment="Camera" Bounds="416,676" isIOBox="true" />
           <Pad Id="Pk7RXQ1yHp2OdW8Im0lK65" Comment="Camera" Bounds="416,697">
-            <p:TypeAnnotation LastCategoryFullName="Stride.API.Engine" LastSymbolSource="VL.Stride.Runtime.TypeForwards.vl">
+            <p:TypeAnnotation LastCategoryFullName="Stride.API.Engine" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
               <Choice Kind="TypeFlag" Name="Entity" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="AL9mIJlcWnwOZHAqnt3JHu" Comment="Child" Bounds="384,605">
-            <p:TypeAnnotation LastCategoryFullName="Stride.API.Engine" LastSymbolSource="VL.Stride.Runtime.TypeForwards.vl">
+            <p:TypeAnnotation LastCategoryFullName="Stride.API.Engine" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
               <Choice Kind="TypeFlag" Name="Entity" />
             </p:TypeAnnotation>
           </Pad>
@@ -293,7 +326,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="KsLRYnT9SyBPkjipjpACjV" Location="VL.CoreLib" Version="2021.4.8" />
-  <NugetDependency Id="OUjLHqx9sacMgwySzpRrGh" Location="VL.Stride" Version="2021.4.8" />
-  <DocumentDependency Id="Go6Fvl5nxW0MPpBvRfbhrM" Location="../VL.3D.Curve.vl" />
+  <NugetDependency Id="KsLRYnT9SyBPkjipjpACjV" Location="VL.CoreLib" Version="2025.7.0" />
+  <NugetDependency Id="OUjLHqx9sacMgwySzpRrGh" Location="VL.Stride" Version="2025.7.0" />
+  <NugetDependency Id="EHmNFyxthOxMbITonVMqO8" Location="VL.Stride.TextureFX" Version="2025.7.0" />
+  <DocumentDependency Id="Fyz3mp6B85MMQ5AO2ooIM6" Location="../VL.3D.Curves.vl" />
 </Document>

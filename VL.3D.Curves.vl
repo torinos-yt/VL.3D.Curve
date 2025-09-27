@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="MUI4PNksk4qMsuVlFWNigQ" LanguageVersion="2025.7.1-0013-g8fcece0df9" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="NB2RWouMhVpNn3am8QuOHy" LanguageVersion="2025.7.0" Version="0.128">
   <Patch Id="DyvKP8f9IUCMymlEFnDK7d">
-    <Canvas Id="NESItpEmKD3Qba8t8kvfEg" DefaultCategory="3D.Curve" CanvasType="FullCategory">
+    <Canvas Id="NESItpEmKD3Qba8t8kvfEg" DefaultCategory="3D.Curves" CanvasType="FullCategory">
       <!--
 
     ************************ Bezier3D ************************
@@ -665,7 +665,7 @@
             </Node>
             <ControlPoint Id="H9kOr26BkQ5PVwmcSRRFis" Bounds="888,888" />
             <ControlPoint Id="UaJcGKdpwHONUZUwEUzv7z" Bounds="819,880" />
-            <Node Bounds="408,1193,60,26" Id="JrvNSdCgdeJQUtF2nrQ1mg">
+            <Node Bounds="408,1193,80,26" Id="JrvNSdCgdeJQUtF2nrQ1mg">
               <p:NodeReference LastCategoryFullName="3D.Curve.Bezier3D" LastDependency="VL.3D.Curve.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="DistanceTable" />
@@ -721,10 +721,12 @@
                 <Patch Id="O2w924up49JLqh0SuaKzi0" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="PcW4d90FJanOyuESwnY1bV" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="875,1325,48,19" Id="VaOU8PWMYHVNybDvCRt0Ro">
-                  <p:NodeReference LastCategoryFullName="VL.3D.Curve" LastDependency="VL.3D.Curve.vl">
+                  <p:NodeReference LastCategoryFullName="3D.Curves" LastDependency="VL.3D.Curves.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="Curves" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
                     <Choice Kind="OperationCallFlag" Name="LookAt (Direction)" />
-                    <CategoryReference Kind="Category" Name="Curve" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="RWjulV4DXL3OWddtLfmbTM" Name="Direction" Kind="InputPin" />
                   <Pin Id="IGgOEb9w7OKPfGYlGW4N9E" Name="Translate" Kind="InputPin" />
@@ -1127,7 +1129,7 @@
             <ControlPoint Id="UnHyU9Cx2GEP7gKH3B1guF" Bounds="283,350" />
             <ControlPoint Id="RjVe8nXQyrBQV8iLONH78H" Bounds="1095,406" />
             <ControlPoint Id="AswWSPB88nRMBGOqRRGFZs" Bounds="509,559" />
-            <Node Bounds="2245,1186,485,385" Id="IkJ8HinPjiINNboh9qSlBR">
+            <Node Bounds="2245,1186,486,385" Id="IkJ8HinPjiINNboh9qSlBR">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -1135,7 +1137,7 @@
               </p:NodeReference>
               <Pin Id="DNOxDEPJEPqOlrgya0H4Me" Name="Condition" Kind="InputPin" />
               <ControlPoint Id="O86LRcNtto9OQgx23nuNnK" Bounds="2384,1565" Alignment="Bottom" />
-              <ControlPoint Id="ImYfHAgtV6IORdUjSdsxEi" Bounds="2387,1193" Alignment="Top" />
+              <ControlPoint Id="ImYfHAgtV6IORdUjSdsxEi" Bounds="2387,1192" Alignment="Top" />
               <Patch Id="SIFspYcAyzmNl7OvN86IA1" ManuallySortedPins="true">
                 <Node Bounds="2402,1450,85,19" Id="Mmm6UV2bswQMue7zMYS7kB">
                   <p:NodeReference LastCategoryFullName="Stride.Models.Meshes" LastDependency="VL.Stride.Rendering.vl">
@@ -1184,12 +1186,12 @@
                   <Pin Id="BIUdj4gsoLYNVGD0XufBBU" Name="Elements" Kind="InputPin" />
                   <Pin Id="Lr3ZfIiGZPKQB68VmO471P" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Pad Id="TrHI0DmAyrUM1RilodSocy" Comment="Format" Bounds="2492,1250,172,15" ShowValueBox="true" isIOBox="true" Value="R32G32B32_Float">
+                <Pad Id="TrHI0DmAyrUM1RilodSocy" Comment="Format" Bounds="2492,1250,173,15" ShowValueBox="true" isIOBox="true" Value="R32G32B32_Float">
                   <p:TypeAnnotation LastCategoryFullName="Stride.API.Graphics" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
                     <Choice Kind="TypeFlag" Name="PixelFormat" />
                   </p:TypeAnnotation>
                 </Pad>
-                <Pad Id="Ogz83w9FBP2Pxxt2Kujsum" Comment="Topology" Bounds="2465,1399,152,15" ShowValueBox="true" isIOBox="true" Value="LineStrip">
+                <Pad Id="Ogz83w9FBP2Pxxt2Kujsum" Comment="Topology" Bounds="2465,1399,153,15" ShowValueBox="true" isIOBox="true" Value="LineStrip">
                   <p:TypeAnnotation LastCategoryFullName="Stride.API.Graphics" LastDependency="VL.Stride.Runtime.TypeForwards.vl">
                     <Choice Kind="TypeFlag" Name="PrimitiveType" />
                   </p:TypeAnnotation>
@@ -1256,7 +1258,7 @@
                   <Pin Id="PJ63lktp6fVLJO2vZXd2Yd" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="ITAFgsEvZdXNjHzdQpqhAI" Name="LUT" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="2297,1338,109,87" Id="FMKuws9pRxZP9yIIkUclGC">
+                <Node Bounds="2297,1338,109,88" Id="FMKuws9pRxZP9yIIkUclGC">
                   <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
@@ -3159,13 +3161,12 @@
                       <Pin Id="Fl5yeEu18p3PhJWdhQ0k0k" Name="Up" Kind="InputPin" />
                       <Pin Id="LZv4l2a7MohMpxTB7gEQNg" Name="Output" Kind="StateOutputPin" />
                     </Node>
-                    <Node Bounds="949,436,48,26" Id="QcEKUTRZB3GPkjLLqC7lYo">
-                      <p:NodeReference LastCategoryFullName="VL.3D.Curve.Bezier3D" LastDependency="VL.3D.Curve.vl">
+                    <Node Bounds="949,436,48,19" Id="QcEKUTRZB3GPkjLLqC7lYo">
+                      <p:NodeReference LastCategoryFullName="3D.Curves.Bezier3D" LastDependency="VL.3D.Curves.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="Category" Name="3D" />
-                        <CategoryReference Kind="Category" Name="Curve" />
+                        <CategoryReference Kind="ClassType" Name="Bezier3D" />
                         <Choice Kind="OperationCallFlag" Name="Length" />
-                        <CategoryReference Kind="ClassType" Name="Bezier3D" NeedsToBeDirectParent="true" />
                       </p:NodeReference>
                       <Pin Id="OF0QOKDW6flN9sgTjyMil0" Name="Input" Kind="StateInputPin" />
                       <Pin Id="QqhuiESiHt7PHvGXi0hE8q" Name="Output" Kind="StateOutputPin" />
@@ -3404,10 +3405,12 @@
                 <Patch Id="PI7KQQ7N1JFQZKkqcK7VN4" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="CgWi5iXYz43MvD3Thy5K9q" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="492,1216,48,19" Id="IxVvMCeShVWNgqxpxkOTL0">
-                  <p:NodeReference LastCategoryFullName="VL.3D.Curve" LastDependency="VL.3D.Curve.vl">
+                  <p:NodeReference LastCategoryFullName="3D.Curves" LastDependency="VL.3D.Curves.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="Curves" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
                     <Choice Kind="OperationCallFlag" Name="LookAt (Direction)" />
-                    <CategoryReference Kind="Category" Name="Curve" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="Uej9HkdmaGGPYM3LA4V3eW" Name="Direction" Kind="InputPin" />
                   <Pin Id="DVGxwzY8fMfP22UsIiMzBL" Name="Translate" Kind="InputPin" />
@@ -11379,11 +11382,11 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="UZybaItimxZMY3PXdN5mcy" Location="VL.CoreLib" Version="2025.7.1-0013-g8fcece0df9" />
-  <NugetDependency Id="HwODkpMDlCxOGduuwviYrF" Location="VL.Stride" Version="2025.7.1-0013-g8fcece0df9" />
+  <NugetDependency Id="UZybaItimxZMY3PXdN5mcy" Location="VL.CoreLib" Version="2025.7.0" />
+  <NugetDependency Id="HwODkpMDlCxOGduuwviYrF" Location="VL.Stride" Version="2025.7.0" />
   <PlatformDependency Id="UrgFIS87IQnOiFhtAz2z3Z" Location="../../../../../../../../Program Files/vvvv/vvvv_gamma_2021.4.7/lib/Stride.Rendering.dll" />
   <PlatformDependency Id="LvKaP1MKXJyOCohnJeIdMb" Location="../../../../../../../../Program Files/vvvv/vvvv_gamma_2021.4.7/lib/Stride.Graphics.dll" />
   <PlatformDependency Id="MihkF8KSNiDO9TWNocQMYt" Location="D:/Documents/Dev/VL.Curve3D/lib/netstandard2.0/VL.Curve3D.dll" />
-  <NugetDependency Id="BVUuTBjxDUhLNSd9mSLYrE" Location="VL.Skia" Version="2025.7.1-0013-g8fcece0df9" />
-  <NugetDependency Id="TXhh0ONaZlvLaIIyQKDfzq" Location="VL.Stride.TextureFX" Version="2025.7.1-0013-g8fcece0df9" />
+  <NugetDependency Id="BVUuTBjxDUhLNSd9mSLYrE" Location="VL.Skia" Version="2025.7.0" />
+  <NugetDependency Id="TXhh0ONaZlvLaIIyQKDfzq" Location="VL.Stride.TextureFX" Version="2025.7.0" />
 </Document>
